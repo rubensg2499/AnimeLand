@@ -1,0 +1,8 @@
+/__pycache__
+/animeland.db
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pdf
+*.tiff
