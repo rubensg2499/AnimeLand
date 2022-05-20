@@ -135,7 +135,7 @@ def echo(bot):
             else:
                 if(opcion == c.START):
                     f.enviar_mensaje(update, c.BIENVENIDA)
-                if(opcion == c.RECOMENDAR_ANIMES):
+                elif(opcion == c.RECOMENDAR_ANIMES):
                     comando_ocupado = 1
                     f.enviar_mensaje(update, c.PROCESANDO_MENSAJE)
                     jikan = Jikan()
@@ -154,15 +154,13 @@ def echo(bot):
                     comando_ocupado = False
                 elif(opcion == c.BUSCAR_ANIME):
                     comando_ocupado = 2
-                    f.enviar_mensaje(
-                        update, "Por favor ingrese el título de un anime a buscar.\nEjemplo: Naruto")
+                    f.enviar_mensaje(update, c.INGRESAR_TITULO_ANIME)
                 elif(opcion == c.BUSCAR_ANIME_POR_GENERO):
                     comando_ocupado = 3
                     f.enviar_mensaje(update, c.LISTA_GENEROS)
                 elif(opcion == c.MOSTRAR_ANIME):
                     comando_ocupado = 4
-                    f.enviar_mensaje(
-                        update, "Por favor ingrese el id de un anime a buscar.\nEjemplo: 666")
+                    f.enviar_mensaje(update, c.INGRESAR_ID_ANIME)
                 else:
                     f.enviar_mensaje(update, c.MENSAJE_NO_ENTENDIDO)
 
